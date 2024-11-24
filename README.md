@@ -27,6 +27,7 @@ default and parameterized constructors and T default_value() method implemented
 
 #include "async.hpp"
 
+//complex type (user defined)
 struct MyS
 {
     float x, y;
@@ -40,6 +41,9 @@ struct MyS
     }
 };
 
+//end of complex user defined type
+
+//class specialization and defining pimple_type class
 template <>
 class async::AsyncTask<MyS>::pimpl_type
 {
@@ -52,12 +56,17 @@ private:
     MyS _value;
 };
 
+//end of specializxation
+
+//class inheritance
 class TestAsync : public async::AsyncTask<MyS>
 {
 public:
     TestAsync() = default;
 };
+//end of class inhetitance
 
+//actual class to handle async task
 class ReimplementAsync
 {
 public:
@@ -88,6 +97,7 @@ public:
 private:
     TestAsync _async;
 };
+//end of actual class for async tasks
 
 int main(int argc, char **argv)
 {
