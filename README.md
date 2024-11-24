@@ -6,6 +6,7 @@ class can be inherit and will work similar as it was not inherit,
 but class pimpl_type must be re-implemented as a template spetialization
 of the desired type ex:
 
+```cpp
 template<>
 class async::AsyncTask<datatype>::pimpl_type
 {
@@ -15,6 +16,7 @@ class async::AsyncTask<datatype>::pimpl_type
 <!-- private: -->
 
 };
+```
 
 <b>Note</b>:
 datatype primitive are ok but, if a complex datatype is provided then,
