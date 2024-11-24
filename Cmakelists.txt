@@ -1,0 +1,6 @@
+cmake_minimum_required(VERSION 3.26.4)
+project(ASYNC_TASK_CLASS LANGUAGES CXX VERSION 0.1)
+set(CMAKE_CXX_STANDARD 23)
+
+add_executable(main_async "main.cpp" "async.hpp")
+# add_library(async, STATIC "async.hpp")
